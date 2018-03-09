@@ -2,8 +2,8 @@
 import last from 'lodash/last'
 import trim from 'lodash/trim'
 import React, {Component} from 'react'
-import {AutosizeInput, Box, Text, Icon} from '../../common-adapters'
-import {globalColors, globalMargins, globalStyles} from '../../styles'
+import {AutosizeInput, Box, Text, TextMixed, Icon} from '../../common-adapters'
+import {globalColors, globalMargins, globalStyles, lineHeight} from '../../styles'
 import IconOrAvatar from '../icon-or-avatar'
 import {followingStateToStyle} from '../shared'
 import {getStyle as getTextStyle} from '../../common-adapters/text'
@@ -35,7 +35,7 @@ class UserItem extends Component<UserItemProps> {
           type="BodySemibold"
           style={{
             ...followingStateToStyle(followingState),
-            lineHeight: '18px',
+            lineHeight: lineHeight(18),
             marginLeft: globalMargins.xtiny,
           }}
         >
@@ -211,7 +211,7 @@ const _inputStyle = {
   color: globalColors.black_75,
   border: 'none',
   outline: 'none',
-  lineHeight: '22px',
+  lineHeight: lineHeight(22),
   padding: 0,
 }
 

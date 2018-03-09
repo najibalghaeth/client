@@ -1,7 +1,7 @@
 // @flow
 /* eslint-env browser */
 import React, {Component} from 'react'
-import {Box, Icon, Input, Text} from '../../../../common-adapters'
+import {Box, Icon, Input, Text, TextMixed} from '../../../../common-adapters'
 import {globalColors, globalMargins, globalStyles} from '../../../../styles'
 import {Picker} from 'emoji-mart'
 import {backgroundImageFn} from '../../../../common-adapters/emoji'
@@ -179,9 +179,13 @@ class ConversationInput extends Component<InputProps> {
           >
             {isTyping(this.props.typing)}
           </Text>
-          <Text type="BodySmall" style={{...styleFooter, textAlign: 'right'}} onClick={this.props.inputFocus}>
+          <TextMixed
+            type="BodySmall"
+            style={{...styleFooter, textAlign: 'right'}}
+            onClick={this.props.inputFocus}
+          >
             *bold*, _italics_, `code`, >quote
-          </Text>
+          </TextMixed>
         </Box>
       </Box>
     )

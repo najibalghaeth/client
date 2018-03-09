@@ -4,8 +4,7 @@ import * as React from 'react'
 import Text from './text'
 import omit from 'lodash/omit'
 import type {Props} from './meta'
-import {globalColors} from '../styles'
-import {isAndroid} from '../constants/platform'
+import {globalColors, lineHeight, isAndroid} from '../styles'
 
 const Meta = ({title, style}: Props) => (
   <Box
@@ -26,7 +25,7 @@ const Meta = ({title, style}: Props) => (
         fontSize: 12,
         fontWeight: '700',
         height: 15,
-        lineHeight: 15,
+        lineHeight: lineHeight(15),
         alignSelf: 'center',
       }}
     >

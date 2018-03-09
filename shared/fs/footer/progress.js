@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import {globalStyles, globalColors, globalMargins} from '../../styles'
+import {globalStyles, globalColors, globalMargins, lineHeight} from '../../styles'
 import {Box, Text} from '../../common-adapters'
 
 type ProgressProps = {
@@ -47,7 +47,7 @@ const stylesTubeStuffing = {
 const stylesText = {
   color: globalColors.white,
   fontSize: 10,
-  lineHeight: 1.2,
+  lineHeight: lineHeight(1.2),
 }
 
 export default Progress

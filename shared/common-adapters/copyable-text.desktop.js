@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import {globalStyles, globalColors} from '../styles'
+import {globalStyles, globalColors, lineHeight} from '../styles'
 import type {Props} from './copyable-text'
 
 const CopyableText = ({value, style}: Props) => {
@@ -26,7 +26,7 @@ const styleBase = {
   border: `solid 1px ${globalColors.black_10}`,
   borderRadius: 3,
   fontSize: 13,
-  lineHeight: '17px',
+  lineHeight: lineHeight(17),
   whiteSpace: 'pre-wrap',
   wordWrap: 'break-word',
   overflowY: 'auto',

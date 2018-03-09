@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import {globalStyles} from '../styles'
+import {globalStyles, lineHeight} from '../styles'
 
 import type {Props} from './clickable-box'
 
@@ -83,7 +83,7 @@ const _containerStyle = {
   display: 'flex',
   flexDirection: 'column',
   height: undefined,
-  lineHeight: 0,
+  lineHeight: lineHeight(0),
   minWidth: undefined,
   textAlign: 'left',
   transform: 'none',

@@ -10,7 +10,15 @@ const Render = ({isPrivate, users, avatar, onSubmit, onCancel}: Props) => {
   const header = (
     <Box style={{width: 63, height: 63, position: 'relative', opacity: 0.6}}>
       <Icon type={iconThemed[theme]} style={{position: 'absolute', left: 0, top: 0}} />
-      <Avatar size={32} username={avatar} style={{...styleAvatar, borderColor: borderColorThemed[theme]}} />
+      <Avatar
+        size={32}
+        username={avatar}
+        // $FlowIssue passing desktop only style boxSizing in desktop file is ok
+        style={{
+          ...styleAvatar,
+          borderColor: borderColorThemed[theme],
+        }}
+      />
     </Box>
   )
   const body = (

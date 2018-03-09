@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import {Box, Text, Icon, Button, BackButton} from '../../common-adapters'
-import {globalStyles, globalColors} from '../../styles'
+import {globalStyles, globalColors, lineHeight} from '../../styles'
 
 import type {Props} from '.'
 
@@ -135,7 +135,7 @@ const stylesMeta = {
   color: globalColors.white,
   fontSize: 10,
   height: 11,
-  lineHeight: '11px',
+  lineHeight: lineHeight(11),
   paddingLeft: 2,
   paddingRight: 2,
   textTransform: 'uppercase',

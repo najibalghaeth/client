@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react'
-import {Avatar, BackButton, Box, Button, Icon, Text} from '../common-adapters'
+import {Avatar, BackButton, Box, Button, Icon, Text, TextMixed} from '../common-adapters'
 import capitalize from 'lodash/capitalize'
-import {globalColors, globalStyles, globalMargins} from '../styles'
+import {globalColors, globalStyles, globalMargins, lineHeight} from '../styles'
 import {platformToLogo24} from '../constants/search'
 import {AVATAR_SIZE, HEADER_SIZE} from '../profile/index.desktop'
 
@@ -34,9 +34,9 @@ const NonUserRender = (props: Props) => (
               {props.fullname}
             </Text>
           )}
-          <Text type="BodySmall" style={styleServiceLabel}>
+          <TextMixed type="BodySmall" style={styleServiceLabel}>
             {props.serviceName} user
-          </Text>
+          </TextMixed>
           <Button
             style={{marginTop: globalMargins.medium}}
             onClick={props.onStartChat}
@@ -114,7 +114,7 @@ const styleFullname = {
 
 const styleServiceLabel = {
   fontSize: 11,
-  lineHeight: '14px',
+  lineHeight: lineHeight(14),
   marginTop: globalMargins.xtiny,
   textTransform: 'uppercase',
 }

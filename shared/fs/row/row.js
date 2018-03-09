@@ -21,7 +21,13 @@ export const Row = ({name, type, itemStyles, onOpen, openInFileUI}: RowProps) =>
         <Box style={stylesRowBox}>
           <PathItemIcon spec={itemStyles.iconSpec} />
           <Box style={folderBoxStyle}>
-            <Text type={itemStyles.textType} style={rowTextStyles(itemStyles.textColor)}>
+            <Text
+              type={itemStyles.textType}
+              style={
+                // $FlowIssue style incompatible with mobile
+                rowTextStyles(itemStyles.textColor)
+              }
+            >
               {name}
             </Text>
           </Box>

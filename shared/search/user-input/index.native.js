@@ -3,7 +3,7 @@ import last from 'lodash/last'
 import React, {Component} from 'react'
 import {TextInput, Animated} from 'react-native'
 import {Box, Text, Icon, ClickableBox} from '../../common-adapters'
-import {globalColors, globalMargins, globalStyles} from '../../styles'
+import {globalColors, globalMargins, globalStyles, lineHeight} from '../../styles'
 import IconOrAvatar from '../icon-or-avatar'
 import {followingStateToStyle} from '../shared'
 import {getStyle as getTextStyle} from '../../common-adapters/text'
@@ -237,7 +237,7 @@ const _pillStyle = {
 
 const _pillTextStyle = {
   fontSize: 14,
-  lineHeight: 20,
+  lineHeight: lineHeight(20),
   height: 22,
 }
 
@@ -245,7 +245,7 @@ const _inputStyle = {
   ...getTextStyle('BodySemibold'),
   color: globalColors.black_75,
   fontWeight: '600',
-  lineHeight: 20,
+  lineHeight: lineHeight(20),
   height: 22,
   paddingTop: 2,
   paddingBottom: 2,

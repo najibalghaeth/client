@@ -115,3 +115,4 @@ function getStyle(
 export {getStyle}
 
 export default Text
+export {Text as TextMixed}

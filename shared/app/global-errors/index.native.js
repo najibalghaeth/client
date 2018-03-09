@@ -10,7 +10,7 @@ import {
   List,
   NativeTouchableWithoutFeedback,
 } from '../../common-adapters/index.native'
-import {globalStyles, globalColors, globalMargins, isIPhoneX} from '../../styles'
+import {globalStyles, globalColors, globalMargins, isIPhoneX, lineHeight} from '../../styles'
 import {copyToClipboard} from '../../util/clipboard'
 
 import type {Props as _Props} from './index'
@@ -96,7 +96,11 @@ class GlobalError extends Component<Props, State> {
 
   _renderItem = (index: number, item: string) => {
     return (
-      <Text key={String(index)} type="BodySmall" style={{color: 'white', fontSize: 8, lineHeight: 8}}>
+      <Text
+        key={String(index)}
+        type="BodySmall"
+        style={{color: 'white', fontSize: 8, lineHeight: lineHeight(8)}}
+      >
         {item}
         {'\n'}
       </Text>
@@ -184,7 +188,7 @@ const summaryRowStyle = {
 const detailStyle = {
   color: globalColors.white_75,
   fontSize: 13,
-  lineHeight: 17,
+  lineHeight: lineHeight(17),
   padding: globalMargins.xtiny,
   paddingTop: globalMargins.tiny,
 }

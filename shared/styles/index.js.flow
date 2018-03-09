@@ -20,7 +20,7 @@ declare export var hairlineWidth: number
 declare export function backgroundURL(...path: Array<string>): string
 declare export function styleSheetCreate(obj: Object): Object
 declare export function collapseStyles(styles: any): any
-declare export function lineHeight(h: number): string | number
+declare export function lineHeight(h: number | string): number // technically a lie but the common text component uses number in the more strict case
 
 declare export var windowStyle: {
   minWidth: number,
@@ -37,3 +37,4 @@ declare export var isMobile: boolean
 declare export var isIPhoneX: boolean
 
 declare export var backgroundModeToColor: {[key: Background]: string}
+export type {StylesDesktop, StylesMobile, StylesCrossPlatform} from './css'

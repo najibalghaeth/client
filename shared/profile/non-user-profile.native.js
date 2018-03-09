@@ -3,7 +3,7 @@ import * as React from 'react'
 import openURL from '../util/open-url'
 import {Avatar, Box, Button, Icon, Text, HeaderHoc} from '../common-adapters'
 import capitalize from 'lodash/capitalize'
-import {globalColors, globalStyles, globalMargins} from '../styles'
+import {globalColors, globalStyles, globalMargins, lineHeight} from '../styles'
 import {platformToLogo24} from '../constants/search'
 
 import type {Props} from './non-user-profile'
@@ -82,7 +82,7 @@ const styleFullname = {
 
 const styleServiceLabel = {
   fontSize: 13,
-  lineHeight: 17,
+  lineHeight: lineHeight(17),
   marginTop: globalMargins.xtiny,
 }
 

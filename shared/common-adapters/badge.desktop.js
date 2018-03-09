@@ -2,7 +2,7 @@
 import Box from './box'
 import * as React from 'react'
 import Text from './text'
-import {globalStyles, globalColors} from '../styles'
+import {globalStyles, globalColors, lineHeight} from '../styles'
 
 import type {Props} from './badge'
 
@@ -32,7 +32,7 @@ const defaultBadgeStyle = {
 
 const textStyle = {
   flex: 0,
-  lineHeight: '8px',
+  lineHeight: lineHeight(8),
   fontSize: 9,
   color: globalColors.white,
 }

@@ -3,7 +3,7 @@ import * as shared from './icon.shared'
 import logger from '../logger'
 import React, {Component} from 'react'
 import shallowEqual from 'shallowequal'
-import {globalStyles, globalColors, glamorous} from '../styles'
+import {globalStyles, globalColors, glamorous, lineHeight} from '../styles'
 import {iconMeta} from './icon.constants'
 import {resolveImageAsURL} from '../desktop/resolve-root'
 import Box from './box'
@@ -73,7 +73,7 @@ class Icon extends Component<Exact<Props>, void> {
         fontWeight: 'normal',
         fontVariant: 'normal',
         textTransform: 'none',
-        lineHeight: 1,
+        lineHeight: lineHeight(1),
         WebkitFontSmoothing: 'antialiased',
         ...this.props.style,
       }

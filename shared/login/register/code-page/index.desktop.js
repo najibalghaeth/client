@@ -15,7 +15,7 @@ import {
   codePageModeEnterText,
   codePageModeShowText,
 } from '../../../constants/login'
-import {globalStyles, globalColors, globalMargins} from '../../../styles'
+import {globalStyles, globalColors, globalMargins, lineHeight} from '../../../styles'
 import {getStyle} from '../../../common-adapters/text'
 
 import type {Props} from '.'
@@ -161,7 +161,7 @@ const stylesPaperkey = {
   ...globalStyles.fontTerminal,
   color: globalColors.darkBlue,
   display: 'inline-block',
-  lineHeight: '20px',
+  lineHeight: lineHeight(20),
   marginBottom: globalMargins.xlarge,
   marginTop: globalMargins.medium,
   maxWidth: 460,

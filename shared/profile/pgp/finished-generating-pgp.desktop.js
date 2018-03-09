@@ -1,7 +1,7 @@
 // @flow
 import React, {Component} from 'react'
 import {Box, Button, Checkbox, PlatformIcon, StandardScreen, Text} from '../../common-adapters'
-import {globalStyles, globalColors, globalMargins} from '../../styles'
+import {globalStyles, globalColors, globalMargins, lineHeight} from '../../styles'
 import type {Props} from './finished-generating-pgp'
 
 import {CHECKBOX_SIZE, CHECKBOX_MARGIN} from '../../common-adapters/checkbox.desktop'
@@ -76,7 +76,7 @@ const stylePgpKeyString = {
   borderRadius: 3,
   ...globalStyles.fontTerminal,
   fontSize: 13,
-  lineHeight: '17px',
+  lineHeight: lineHeight(17),
   whiteSpace: 'pre-wrap',
   wordWrap: 'break-word',
   overflowY: 'auto',

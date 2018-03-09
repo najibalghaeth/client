@@ -8,7 +8,7 @@ import Avatar from './avatar'
 import get from 'lodash/get'
 import shallowEqual from 'shallowequal'
 import type {Props, ItemProps, TabBarButtonProps} from './tab-bar'
-import {globalStyles, globalColors, globalMargins} from '../styles'
+import {globalStyles, globalColors, globalMargins, lineHeight} from '../styles'
 
 // TODO this thing does 4 different things. a lot of the main nav logic is in here which isn't used by anything else. Split this apart!
 
@@ -287,7 +287,7 @@ const stylesTabBarButtonIcon = {
 const stylesIcon = {
   height: 14,
   paddingRight: 6,
-  lineHeight: '16px',
+  lineHeight: lineHeight(16),
   marginBottom: 2,
   textAlign: 'center',
 }

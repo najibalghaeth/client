@@ -132,7 +132,7 @@ const stylesMeta = {
   color: globalColors.white,
   fontSize: 12,
   height: 15,
-  lineHeight: 15,
+  lineHeight: lineHeight(15),
   marginTop: globalMargins.xtiny,
   paddingLeft: 2,
   paddingRight: 2,

@@ -20,7 +20,13 @@ const Download = (props: DownloadProps) => (
     </Box>
     <ClickableBox style={stylesNameAndProgressBox} onClick={props.open}>
       <Box style={stylesNameAndProgress}>
-        <Text type="BodySmallSemibold" style={stylesText}>
+        <Text
+          type="BodySmallSemibold"
+          style={
+            // $FlowIssue styles incompatible with mobile
+            stylesText
+          }
+        >
           {props.filename}
         </Text>
         {!props.isDone && (

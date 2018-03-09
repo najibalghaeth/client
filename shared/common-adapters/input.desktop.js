@@ -3,7 +3,7 @@ import * as React from 'react'
 import {findDOMNode} from 'react-dom'
 import Box from './box'
 import Text, {getStyle as getTextStyle} from './text.desktop'
-import {globalStyles, globalColors, globalMargins} from '../styles'
+import {globalStyles, globalColors, globalMargins, lineHeight} from '../styles'
 
 import type {Props} from './input'
 
@@ -336,7 +336,7 @@ class Input extends React.PureComponent<Props, State> {
     const smallLabelStyle = {
       ...globalStyles.fontSemibold,
       fontSize: _bodySmallTextStyle.fontSize,
-      lineHeight: `${_lineHeight}px`,
+      lineHeight: lineHeight(_lineHeight),
       marginRight: 8,
       color: globalColors.blue,
       ...this.props.smallLabelStyle,

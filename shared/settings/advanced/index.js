@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import {globalStyles, globalMargins, globalColors, isMobile} from '../../styles'
-import {Box, Button, Text, Checkbox} from '../../common-adapters'
+import {Box, Button, Text, TextMixed, Checkbox} from '../../common-adapters'
 
 type Props = {
   openAtLogin: boolean,
@@ -107,7 +107,7 @@ class Developer extends React.Component<Props, DeveloperState> {
           flex: 1,
         }}
       >
-        <Text
+        <TextMixed
           type="BodySmallSemibold"
           onClick={this._onLabelClick}
           style={{...(isMobile ? {} : {cursor: 'default'}), textAlign: 'center'}}
@@ -115,7 +115,7 @@ class Developer extends React.Component<Props, DeveloperState> {
           {isMobile
             ? `Please don't do anything here unless instructed to by a developer.`
             : `Please don't do anything below here unless instructed to by a developer.`}
-        </Text>
+        </TextMixed>
         <Box style={{width: '100%', height: 2, backgroundColor: globalColors.grey}} />
         <Button
           style={{marginTop: globalMargins.small}}

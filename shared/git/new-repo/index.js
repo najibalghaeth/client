@@ -1,6 +1,17 @@
 // @flow
 import * as React from 'react'
-import {Avatar, Box, Text, Icon, Input, Button, Dropdown, Checkbox, ScrollView} from '../../common-adapters'
+import {
+  Avatar,
+  Box,
+  Text,
+  TextMixed,
+  Icon,
+  Input,
+  Button,
+  Dropdown,
+  Checkbox,
+  ScrollView,
+} from '../../common-adapters'
 import {globalStyles, globalMargins, globalColors, isMobile} from '../../styles'
 
 type Props = {
@@ -64,7 +75,7 @@ class NewRepo extends React.Component<Props, State> {
         }}
       >
         <Avatar isTeam={true} teamname={item} size={16} style={{marginRight: globalMargins.tiny}} />
-        <Text
+        <TextMixed
           type="Header"
           style={{
             width: '100%',
@@ -79,7 +90,7 @@ class NewRepo extends React.Component<Props, State> {
           }}
         >
           {item}
-        </Text>
+        </TextMixed>
       </Box>
     )
   }

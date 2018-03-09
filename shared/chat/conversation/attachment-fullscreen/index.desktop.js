@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import {Box, Icon, Text, PopupDialog, ProgressBar} from '../../../common-adapters/index'
+import {Box, Icon, Text, TextMixed, PopupDialog, ProgressBar} from '../../../common-adapters'
 import {globalColors, globalMargins, globalStyles, fileUIName} from '../../../styles'
 
 import type {Props} from '.'
@@ -36,22 +36,22 @@ const Fullscreen = (props: Props) => {
           {!!props.progressLabel && <ProgressBar ratio={props.progress} />}
           {!props.progressLabel &&
             props.onDownloadAttachment && (
-              <Text
+              <TextMixed
                 type="BodySmall"
                 style={{color: globalColors.black_60, cursor: 'pointer'}}
                 onClick={props.onDownloadAttachment}
               >
                 Download
-              </Text>
+              </TextMixed>
             )}
           {props.onShowInFinder && (
-            <Text
+            <TextMixed
               type="BodySmall"
               style={{color: globalColors.black_60, cursor: 'pointer'}}
               onClick={props.onShowInFinder}
             >
               Show in {fileUIName}
-            </Text>
+            </TextMixed>
           )}
         </Box>
       </Box>

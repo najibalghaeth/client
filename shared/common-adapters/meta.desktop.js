@@ -2,7 +2,7 @@
 import * as React from 'react'
 import Text from './text'
 import type {Props} from './meta'
-import {globalColors} from '../styles'
+import {globalColors, lineHeight} from '../styles'
 
 const Meta = ({title, style}: Props) => (
   <Text
@@ -13,7 +13,7 @@ const Meta = ({title, style}: Props) => (
       fontSize: 10,
       fontWeight: '700',
       height: 11,
-      lineHeight: '11px',
+      lineHeight: lineHeight(11),
       paddingLeft: 3,
       paddingRight: 3,
       alignSelf: 'flex-start',

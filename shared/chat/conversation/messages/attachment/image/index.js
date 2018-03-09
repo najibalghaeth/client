@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import {Box, Text, ClickableBox, Icon, ProgressBar} from '../../../../../common-adapters'
+import {Box, Text, TextMixed, ClickableBox, Icon, ProgressBar} from '../../../../../common-adapters'
 import {globalStyles, globalMargins, globalColors, fileUIName, isMobile} from '../../../../../styles'
 import {ImageRender} from './image-render'
 
@@ -39,9 +39,9 @@ class ImageAttachment extends React.PureComponent<Props> {
         onClick={this.props.onClick}
         onLongPress={this.props.onShowMenu}
       >
-        <Text type="BodySemibold" style={titleStyle}>
+        <TextMixed type="BodySemibold" style={titleStyle}>
           {this.props.title}
-        </Text>
+        </TextMixed>
         <Box
           style={{
             ...(this.props.isPreviewLoaded ? loadedStyle : loadingStyle),

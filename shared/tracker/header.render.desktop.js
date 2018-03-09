@@ -1,7 +1,7 @@
 // @flow
 import React, {PureComponent} from 'react'
 import {Icon, Text} from '../common-adapters/index'
-import {globalStyles, globalColors, globalMargins} from '../styles'
+import {globalStyles, globalColors, globalMargins, lineHeight} from '../styles'
 import {stateColors} from '../util/tracker'
 
 import type {HeaderProps} from './header.render'
@@ -102,5 +102,5 @@ const styleText = {
   paddingRight: globalMargins.medium,
   marginBottom: 40,
   textAlign: 'center',
-  lineHeight: 'normal',
+  lineHeight: lineHeight('normal'),
 }

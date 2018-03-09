@@ -1,6 +1,6 @@
 // @flow
 import React, {PureComponent} from 'react'
-import {Box, Text, ClickableBox} from '../../../../common-adapters'
+import {Box, Text, TextMixed, ClickableBox} from '../../../../common-adapters'
 import {globalStyles, globalColors, globalMargins, isMobile} from '../../../../styles'
 import {TeamAvatar} from '../avatars'
 
@@ -21,7 +21,7 @@ class FilterBigTeamChannel extends PureComponent<Props> {
           }}
         >
           <TeamAvatar teamname={this.props.teamname} isMuted={false} isSelected={false} />
-          <Text
+          <TextMixed
             type="BodySemibold"
             style={{
               ...teamnameStyle,
@@ -30,7 +30,7 @@ class FilterBigTeamChannel extends PureComponent<Props> {
             title={this.props.teamname}
           >
             {this.props.teamname}
-          </Text>
+          </TextMixed>
           <Text
             type="Body"
             style={{

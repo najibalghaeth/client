@@ -3,7 +3,7 @@ import List from './list'
 import React, {Component} from 'react'
 import {Box, TabBar, HeaderHoc} from '../common-adapters'
 import {TabBarItem, TabBarButton} from '../common-adapters/tab-bar'
-import {globalStyles, globalColors, globalMargins} from '../styles'
+import {globalStyles, globalColors, globalMargins, lineHeight} from '../styles'
 import {compose, defaultProps} from 'recompose'
 
 import type {Props} from '.'
@@ -109,7 +109,7 @@ const styleItem = {
 }
 
 const styleBadgeNumber = {
-  lineHeight: '13px',
+  lineHeight: lineHeight(13),
   fontSize: 11,
 }
 

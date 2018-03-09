@@ -1,5 +1,5 @@
 // @flow
-import {globalStyles, globalColors} from '../styles'
+import {globalStyles, globalColors, lineHeight} from '../styles'
 
 import type {MetaType, TextType, Background} from './text'
 
@@ -32,10 +32,10 @@ function fontSizeToSizeStyle(fontSize: number): ?Object {
     '11': 15,
   }[String(fontSize)]
 
-  const lineHeight = height ? `${height}px` : null
+  const _lineHeight = height ? lineHeight(height) : null
   return {
     fontSize,
-    lineHeight,
+    lineHeight: _lineHeight,
   }
 }
 
@@ -219,7 +219,7 @@ const metaData: {[key: TextType]: MetaType} = {
     fontSize: 13,
     styleOverride: {
       ...globalStyles.fontTerminal,
-      lineHeight: '20px',
+      lineHeight: lineHeight(20),
     },
   },
   TerminalComment: {
@@ -230,7 +230,7 @@ const metaData: {[key: TextType]: MetaType} = {
     fontSize: 13,
     styleOverride: {
       ...globalStyles.fontTerminal,
-      lineHeight: '20px',
+      lineHeight: lineHeight(20),
     },
   },
   TerminalEmpty: {
@@ -242,7 +242,7 @@ const metaData: {[key: TextType]: MetaType} = {
     styleOverride: {
       ...globalStyles.fontTerminal,
       height: 20,
-      lineHeight: '20px',
+      lineHeight: lineHeight(20),
     },
   },
   TerminalInline: {
@@ -255,7 +255,7 @@ const metaData: {[key: TextType]: MetaType} = {
       backgroundColor: globalColors.blue4,
       borderRadius: 2,
       display: 'inline-block',
-      lineHeight: '14px',
+      lineHeight: lineHeight(14),
       height: 16,
       padding: 2,
       wordWrap: 'break-word',

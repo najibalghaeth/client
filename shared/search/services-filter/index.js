@@ -3,7 +3,7 @@
 import * as Types from '../../constants/types/search'
 import React, {Component} from 'react'
 import {Box, Icon, ClickableBox, Text} from '../../common-adapters'
-import {globalStyles, globalColors, globalMargins, transition, isMobile} from '../../styles'
+import {globalStyles, globalColors, globalMargins, transition, isMobile, lineHeight} from '../../styles'
 
 import type {IconType} from '../../common-adapters/icon'
 
@@ -143,7 +143,7 @@ const serviceTooltipPlatformStyle = isMobile
     }
   : {
       ...transition('opacity'),
-      lineHeight: '22px',
+      lineHeight: lineHeight(22),
       cursor: 'default',
       height: 22,
       width: 90,

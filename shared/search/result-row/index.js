@@ -1,7 +1,7 @@
 // @flow
 import * as Types from '../../constants/types/search'
 import * as React from 'react'
-import {Box, Icon, ClickableBox, Text} from '../../common-adapters/index'
+import {Box, Icon, ClickableBox, Text, TextMixed} from '../../common-adapters/index'
 import {globalColors, globalStyles, globalMargins, hairlineWidth, isMobile} from '../../styles'
 import IconOrAvatar from '../icon-or-avatar'
 import {followingStateToStyle} from '../shared'
@@ -61,7 +61,7 @@ const Middle = ({rightService, rightIcon, rightUsername, rightFollowingState}) =
           }}
         />
         {!!rightUsername && (
-          <Text
+          <TextMixed
             type="BodySmallSemibold"
             style={{
               ...followingStateToStyle(rightFollowingState),
@@ -76,7 +76,7 @@ const Middle = ({rightService, rightIcon, rightUsername, rightFollowingState}) =
             }}
           >
             {rightUsername}
-          </Text>
+          </TextMixed>
         )}
       </Box>
     </Box>

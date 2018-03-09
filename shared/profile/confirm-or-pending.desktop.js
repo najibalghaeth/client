@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import {Box, Text, Button, PlatformIcon} from '../common-adapters'
+import {Box, Text, TextMixed, Button, PlatformIcon} from '../common-adapters'
 import {globalStyles, globalColors, globalMargins} from '../styles'
 import {propsForPlatform} from './confirm-or-pending.shared'
 
@@ -31,9 +31,9 @@ const Render = (props: Props) => {
           overlay={platformIconOverlay}
           overlayColor={platformIconOverlayColor}
         />
-        <Text type="Header" style={stylePlatformUsername}>
+        <TextMixed type="Header" style={stylePlatformUsername}>
           {username}
-        </Text>
+        </TextMixed>
         {!!usernameSubtitle && (
           <Text type="Body" style={{color: globalColors.black_20}}>
             {usernameSubtitle}
